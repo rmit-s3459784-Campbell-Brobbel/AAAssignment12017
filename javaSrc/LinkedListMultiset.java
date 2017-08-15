@@ -70,21 +70,21 @@ public void removeOne(T item){
         }
         }
 public void removeAll(T item){
-        Node currentNode=mHead;
-        Node lastNode=null;
+            Node currentNode=mHead;
+            Node lastNode=null;
 
-        while(currentNode!=null){
-        if(currentNode.getValue().equals((String)item)){
-        if(currentNode==mHead)
-        mHead=currentNode.getNext();
-        else lastNode.setNext(currentNode.getNext());
-        mLength--;
-        return;
-        }
-        lastNode=currentNode;
-        currentNode=currentNode.getNext();
-        }
-        }
+            while(currentNode!=null){
+            if(currentNode.getValue().equals((String)item)){
+            if(currentNode==mHead)
+            mHead=currentNode.getNext();
+            else lastNode.setNext(currentNode.getNext());
+            mLength--;
+            return;
+            }
+            lastNode=currentNode;
+            currentNode=currentNode.getNext();
+            }
+            }
 
 public void print(PrintStream out){
         Node currentNode=mHead;
