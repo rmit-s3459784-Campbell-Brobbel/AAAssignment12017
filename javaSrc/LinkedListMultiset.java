@@ -14,7 +14,7 @@ public LinkedListMultiset(){
         mHead=null;
         mLength=0;
         }
-public void add(T item)(
+public void add(T item){
         // Create a new node object with intial head and length
         Node newNode=new Node((String)item);
         if(mHead==null)
