@@ -7,7 +7,7 @@ public class LinkedListMultiset<T> extends Multiset<T>
         protected Node mHead;
         protected int mLength;
 {
-    define the head and the length of the linkedlist
+   // define the head and the length of the linkedlist
 public LinkedListMultiset(){
         // Implement me!
         // end of LinkedListMultiset()
