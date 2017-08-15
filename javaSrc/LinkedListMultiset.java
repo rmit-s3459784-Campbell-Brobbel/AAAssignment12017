@@ -1,19 +1,19 @@
 import java.io.PrintStream;
 import java.util.*;
 
-public class LinkedListMultiset<T> extends Multiset<T>
+public class LinkedListMultiset<T> extends Multiset<T>{
         // changes made s3243720
         // Go to make changes soon
         protected Node mHead;
         protected int mLength;
-{
+
    // define the head and the length of the linkedlist
 public LinkedListMultiset(){
         // Implement me!
         // end of LinkedListMultiset()
         mHead=null;
         mLength=0;
-        )
+        }
 public void add(T item)(
         // Create a new node object with intial head and length
         Node newNode=new Node((String)item);
@@ -34,7 +34,7 @@ public void add(T item)(
         parentNode.setNext(newNode);
         }
         mLength++;
-        }
+}
 
 public int search(T item){
         Node currentNode = mHead;
@@ -53,9 +53,9 @@ public void removeOne(T item){
         Node currentNode=mHead;
         Node lastNode=null;
 
-        while(currNode!=null){
+        while(currentNode!=null){
         if(currentNode.getValue().equals((String)item)){
-        currNode.minusCounter();
+        currentNode.minusCounter();
         if(currentNode.getCounter()==0){
         if(currentNode==mHead)
         mHead=currentNode.getNext();
@@ -66,7 +66,7 @@ public void removeOne(T item){
         return;
         }
         lastNode=currentNode;
-        currNode=currentNode.getNext();
+        currentNode=currentNode.getNext();
         }
         }
 public void removeAll(T item){
@@ -77,7 +77,7 @@ public void removeAll(T item){
         if(currentNode.getValue().equals((String)item)){
         if(currentNode==mHead)
         mHead=currentNode.getNext();
-        else lastNode.setNext(currNode.getNext());
+        else lastNode.setNext(currentNode.getNext());
         mLength--;
         return;
         }
@@ -90,7 +90,7 @@ public void print(PrintStream out){
         Node currentNode=mHead;
 
         while(currentNode!=null){
-        out.printf("%s | %d\n",currNode.getValue()
+        out.printf("%s | %d\n",currentNode.getValue()
         ,currentNode.getCounter());
         currentNode=currentNode.getNext();
         }
