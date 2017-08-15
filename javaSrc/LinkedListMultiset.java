@@ -22,14 +22,14 @@ public void add(T item)(
         else{
         Node currentNode=mHead;
         Node parentNode=null;
-        while(currNode!=null){
+        while(currentNode!=null){
         if(currentNode.getValue().
         equals(newNode.getValue())){
         currentNode.addCounter();
         return;
         }
-        parentNode=currNode;
-        currentNode=currNode.getNext();
+        parentNode=currentNode;
+        currentNode=currentNode.getNext();
         }
         parentNode.setNext(newNode);
         }
@@ -86,9 +86,10 @@ public void removeAll(T item){
         }
         }
 
-public void print(PrintStream out)Node currNode=mHead;
+public void print(PrintStream out){
+        Node currentNode=mHead;
 
-        while(currNode!=null){
+        while(currentNode!=null){
         out.printf("%s | %d\n",currNode.getValue()
         ,currentNode.getCounter());
         currentNode=currentNode.getNext();
