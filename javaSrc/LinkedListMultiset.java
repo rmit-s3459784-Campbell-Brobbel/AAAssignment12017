@@ -95,7 +95,7 @@ public void print(PrintStream out){
         currentNode=currentNode.getNext();
         }
         }
-
+// creating and inner private class to Node
 private class Node {
     protected String mValue;
     protected Node mNext;
